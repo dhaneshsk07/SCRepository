@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+
+    <!-- Define test classes -->
+    <test name="LoginTests">
+        <classes>
+            <class name="SL_Suite.LoginPageTest"/>
+            <!-- Add more test classes if needed -->
+        </classes>
+    </test>
+
+    <!-- Define listeners -->
+    <listeners>
+        <listener class-name="SL_Suite.CustomTestListener"/>
+        <!-- Add more listeners if needed -->
+    </listeners>
+
+    <!-- Define parameters -->
+    <parameter name="browser" value="edge"/>
+    <!-- Add more parameters if needed -->
+
+</suite>
