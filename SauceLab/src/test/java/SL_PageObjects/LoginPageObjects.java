@@ -26,7 +26,7 @@ public class LoginPageObjects extends BaseConnectionSetUp {
 	// Constructor to initialize WebDriver and elements
 	public LoginPageObjects (WebDriver driver) {
 		this.driver1 = driver;
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this); 
 
 	} 
 

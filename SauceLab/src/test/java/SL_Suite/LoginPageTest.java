@@ -84,7 +84,7 @@ public class LoginPageTest extends BaseConnectionSetUp {
 		//		test.fail("FAILED - Test_01 Invalid credential");
 
 		MethodsOnly tt=new MethodsOnly(driver1);
-		tt.setuppf();
+		tt.setuppf();  
 
 
 		//a1=driver1.findElement(By.xpath("//input[@id='user-name']"));

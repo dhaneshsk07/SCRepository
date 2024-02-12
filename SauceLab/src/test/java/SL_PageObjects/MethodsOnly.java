@@ -22,7 +22,7 @@ public class MethodsOnly extends LoginPageObjects {
 	pf.enterPassword("111111");
 	Thread.sleep(2000);
 	pf.clickLoginButton();
-	Thread.sleep(2000);
+	Thread.sleep(2000); 
 	
 	
 	}
