@@ -115,10 +115,17 @@ public class LoginPageTest extends BaseConnectionSetUp {
 		a1.sendKeys("standard_user");	
 		Thread.sleep(2000);
 		a2=driver1.findElement(By.xpath("//input[@id='password']"));
-		a2.sendKeys("secret_sauce1");
+		a2.sendKeys("secret_sauce");
 		Thread.sleep(2000);
 		a3=driver1.findElement(By.xpath("//input[@id='login-button']"));
 		a3.click();
+		
+		a4=driver1.findElement(By.xpath("//span[@class='title']"));
+		String actual=a4.getText().toString();
+		System.out.println(actual);
+		String expected = "Products1";
+		
+		Assert.assertEquals(actual,expected);
 
 	}
 

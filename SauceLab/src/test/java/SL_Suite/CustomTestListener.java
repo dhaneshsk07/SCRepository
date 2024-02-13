@@ -7,6 +7,7 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentTest;
 
 import SL_Resources.ExtentReportUtil;
+import SL_Resources.TakeScreenshot;
 import SL_Suite.LoginPageTest;
 
 public class CustomTestListener implements ITestListener {
@@ -24,7 +25,7 @@ public class CustomTestListener implements ITestListener {
     @Override
     public void onTestStart(ITestResult result) {
         System.out.println("Test method started: " + result.getName());
-    }
+    } 
 
     @Override
     public void onTestSuccess(ITestResult result) {
@@ -42,7 +43,19 @@ public class CustomTestListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
+    	
+    	TakeScreenshot ss=new TakeScreenshot();
+    	ss.screenshotcapture();
+    	
+    	
         System.out.println("Test method failed: " + result.getName());
+        
+        // Access ExtentTest instance from the test class
+        ExtentTest extentTest = ((LoginPageTest) result.getInstance()).test;
+
+        // Log pass status using ExtentTest instance
+        extentTest.pass("Test Failed: " + result.getName());
+        
     }
 
     @Override
